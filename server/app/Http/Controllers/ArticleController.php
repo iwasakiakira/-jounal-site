@@ -23,6 +23,25 @@ class ArticleController extends Controller
         return view('articles.show' , ['article' => $article]);
     }
 
+    public function create()
+    {
+        return view('articles.create');
+    }
 
+    public function store(Request $request)
+    {
+        //インスタンス作成
+        $article = new Article;
 
+        //値の用意
+        $article->title = $request->title;
+        $article->body  = $request->body;
+        $article->timestamps = $request->false;
+
+        //インスタンスに値を設定して保存
+        $article->save();
+
+        //登録したらindexに戻る
+        return redirect('/articles');
+    }
 }
