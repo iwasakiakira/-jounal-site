@@ -4,7 +4,7 @@
 </p>
 
 <p>
-<b>{{ $article->body }}</b>
+<b>論文詳細:<br>{{ $article->body }}</b>
 </p>
 
 
