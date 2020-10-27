@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 //articleクラスを読み込む｡
 use App\article;
+use App\Http\Requests\ArticleRequest;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -13,7 +14,7 @@ class ArticleController extends Controller
     {
         // モデル名::テーブル全件取得
         $article = article::all();
-        // Itemsティレクトリーの中のindexページを指定し、itemsの連想配列を代入
+        // Articlesディレクトリーの中のindexページを指定し、itemsの連想配列を代入
         return view('articles.index', ['article' => $article]);
     }
 
@@ -28,7 +29,7 @@ class ArticleController extends Controller
         return view('articles.create');
     }
 
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
         //インスタンス作成
         $article = new Article;
@@ -51,7 +52,7 @@ class ArticleController extends Controller
         return view('articles.edit' , [ 'article' => $article ]);
     }
 
-    public function update(Request $request , $id)
+    public function update(ArticleRequest $request , $id)
     {
         //インスタンス作成
         $article = Article::find($id);
