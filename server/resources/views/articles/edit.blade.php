@@ -1,16 +1,3 @@
-@if (count($errors) > 0)
-    <div>
-        <P>
-            <b>{{ count($errors) }}件のエラーがあります。</b>
-        </P>
-        <ul>
-            @foreach($errors->all() as $error)
-                <li>{{ $error}}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
 <h1>論文編集</h1>
 
 <!--更新先はitemsのidにしないと増える php artisan rote:listで確認①-->
