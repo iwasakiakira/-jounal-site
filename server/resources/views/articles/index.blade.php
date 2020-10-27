@@ -2,9 +2,9 @@
 <ul>
     @foreach ($article as $article)
         <!-- // リンク先をidで取得し名前で出力 -->
-        <li><a href="/articles/{{ $article->id }}">{{ $article->title }}</a></li><br>
+        <li><a href="/articles/{{ $article->id }}">{{ $article->title }}</a></li>
     @endforeach
-<br>
+
     {{-- 新規投稿画面に移行する｡ --}}
-    <a href="/articles/create"><button>新規投稿</button></a>
+    <a href="/articles/create">新規投稿</a>
 </ul>
