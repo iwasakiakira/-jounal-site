@@ -18,11 +18,9 @@
     タイトル:<br>
 <input type="text" name="title" value="{{ old('title') }}">
 </p>
-
-<p>
+    
     論文詳細:<br>
-<input type="text" name="body" value="{{ old('body') }}">
-</p>
+<textarea type="text" name="body" value="{{ old('body') }}"></textarea><br><br>
 
 <input type="submit" value="投稿">
 </form>

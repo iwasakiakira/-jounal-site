@@ -27,8 +27,8 @@
 
 <p>
     論文詳細:<br>
-<input type="text" name="body" value="{{ old('body') }}">
-</p>
+<textarea type="text" name="body" value="{{ old('body') }}"></textarea><br><br>
+
 
 <input type="submit" value="更新">
 </form>
